@@ -7,11 +7,6 @@ function component() {
     element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
     element.setAttribute('class', 'hello')
 
-    var img = new Image()
-    img.src = weback
-    
-    element.appendChild(img)
-
     return element
 }
 
