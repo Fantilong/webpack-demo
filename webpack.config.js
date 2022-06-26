@@ -11,12 +11,12 @@ module.exports = {
         static: './dist',
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({title: 'Code spliting'}),
+        new HtmlWebpackPlugin({title: 'Caching'}),
     ],
 }
