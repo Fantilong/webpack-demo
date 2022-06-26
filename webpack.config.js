@@ -7,9 +7,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
-        another: './src/another-module.js',
     },
-    // devtool: 'inline-source-map',
     devServer: {
         static: './dist',
     },
@@ -22,12 +20,5 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({title: 'Code spliting'}),
-        // new webpack.optimize.Commons
     ],
-    optimization: {
-        // runtimeChunk: 'single',
-        splitChunks: {
-            chunks: 'all'
-        }
-    },
 }
