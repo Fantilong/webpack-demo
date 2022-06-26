@@ -1,18 +1,14 @@
-function getComponent() {
-    return import('lodash').then(({default: _}) => {
-        var element = document.createElement('div')
-        element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
+import _ from "lodash";
+// import Print from "./print";
 
-        document.body.appendChild(element)
-    }).catch((error) => 'An error occured while loading the component')
+function component() {
+    var element = document.createElement('div')
+    element.innerHTML = _.join(['Hello', 'Webpack'], ' ')
+    // element.onclick = Print.call(null, 'Hello webpack')
+
+    return element
 }
 
-function getBtn() {
-    var btn = document.createElement('button')
-    btn.innerHTML = 'click'
-    btn.onclick = getComponent
+document.body.appendChild(component())
 
-    return btn
-}
-
-document.body.appendChild(getBtn())
+// document.body.appendChild(getBtn())
